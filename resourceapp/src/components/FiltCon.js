@@ -76,7 +76,11 @@ const FiltRes = ({ category }) => {
             category: "headless-cms"
         }
     ].filter((resource) => resource.category === category);
-  
+    /*Filtrering som tar imot resource som en enkel argument og returnerer en boolean verdi om kategorieen fra resource samsvarer 
+    med kategori. Dermed lages det en ny array som filtrerer de tingene som tilhører en bestemt kategori. Jeg valgte å sette inn 
+    hele arrayen i ressurser.js inni selve filtrasjonskomponente. Da jeg prøvde å importere js-filen så fikk jeg konstant 
+    error om at resources aldri ble brukt, og ga opp etter en stund med trial and error i flere timer*/
+
     return (
       <div>
         <h2>{category}</h2>
@@ -90,5 +94,5 @@ const FiltRes = ({ category }) => {
       </div>
     );
   };
-/* Liste opp ting med key https://stackoverflow.com/questions/66299533/i-want-to-get-form-data-in-ul-li-with-the-map-method-react-js*/
+/*Liste opp ting med key https://stackoverflow.com/questions/66299533/i-want-to-get-form-data-in-ul-li-with-the-map-method-react-js*/
 export default FiltRes;
