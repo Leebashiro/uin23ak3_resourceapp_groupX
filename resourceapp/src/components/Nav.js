@@ -8,13 +8,13 @@ const Nav = () => {
     const [selectedId, setSelectedId] = useState(-1);
 /*Nav er definrt som en useState hook kalt selectedId og bruker setSelectedId for å oppdatere staten. Årsaken til at useState
 begynner med en verdi av -1 her er fordi Id på når bokser popper opp starter ved 0, så -1 vil indikere at ingen ID
-har blitt valgt enda. Funksjonen er brukt for å holde data slik at vi kan endre på UI dynamisk i realtime, det vil si å holde styr
-på hvilken navigasjonstab som er åpen*/
+har blitt valgt enda. Funksjonen er brukt for å holde data slik at vi kan endre på UI dynamisk i realtime, det vil si å holde 
+styr på hvilken navigasjonstab som er åpen*/
 
     const handleClick = (id) => {
         setSelectedId(id);
     };
-/*Videre må vi også ha en måte å få brukt dette på. Her lager jeg en handleClick funksjon  som tar id som parameter, og oppdaterer 
+/*Videre må vi også ha en måte å få brukt dette på. Her lager jeg en handleClick funksjon som tar id som parameter, og oppdaterer 
 selectedID state-variabelen med id som verdi. Via handleClick kan vi dermed oppdatere staten, slik at navigasjonen fungerer 
 som den skal*/
 
@@ -36,7 +36,7 @@ som den skal*/
             <ContentBoxes selectedId={selectedId}/>
 
             <LocationURL setSelectedId={setSelectedId} />
-            {/*Passerer ned de tre komponentene med selectdId-prop slik at de klarer å lese verdien, mens den siste har vi inn
+            {/*Passerer ned de to første komponentene med selectdId-prop slik at de klarer å lese verdien, mens den siste har vi inn
             setSelectedId. Imotsetning til de to andre som trenger bare å lese selve proppen (statisk verdi) for å skjønne 
             hva den skal gjøre, så må LocationURL-komponenten ha setSelectedId oppdaterings-funksjonen 
             fordi kompontenens hensikt er å oppdatere setSelectedId verdien*/}

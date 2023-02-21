@@ -30,7 +30,8 @@ function LocationURL({ setSelectedId }) {
   /*Bruker useLocation hook som henter inn info fra URL. Bruker useEffect som kjører logikken hver gang location eller 
   setSelectedId endres. setSelectedId er brukt som en prop og kjører den valgte Id basert på URL. Dette skjes via switch-metoden
   som endrer på den valgte Id via URL. Hvis URL ikke viser til noen valid Id, så er default på setSelectedId -1 og ingenting
-  vil vises på UI. 
+  vil vises på UI. Årsaken til at vi har return null til slutt kommer fra at komponente i seg selv ikke rendrer noe på skjermen,
+  og er hensiktsmessig brukt bare for å oppdatere UI via URL. 
 
   Brukte denne for å finne en metode for å gjøre at når man skriver
   path i URL så kommer opp innholdet. https://stackoverflow.com/questions/69829362/url-checker-with-includes
