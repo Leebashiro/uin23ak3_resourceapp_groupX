@@ -6,7 +6,7 @@ import LocationURL from './LocationURL';
 
 const Nav = () => {
     const [selectedId, setSelectedId] = useState(-1);
-/*Nav er definrt som en useState hook kalt selectedId og bruker setSelectedId for å oppdatere staten. Årsaken til at useState
+/*Nav er definert som en useState hook kalt selectedId og bruker setSelectedId for å oppdatere staten. Årsaken til at useState
 begynner med en verdi av -1 her er fordi Id på når bokser popper opp starter ved 0, så -1 vil indikere at ingen ID
 har blitt valgt enda. Funksjonen er brukt for å holde data slik at vi kan endre på UI dynamisk i realtime, det vil si å holde 
 styr på hvilken navigasjonstab som er åpen*/
